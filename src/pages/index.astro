@@ -1,15 +1,148 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from '../components/Button.astro';
-import Link from '../components/Link.astro';
-import { Image } from 'astro:assets';
+import Button from "../components/Button.astro";
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
 import thumbsup from "../assets/images/thumbsup.png";
 ---
+
 <MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
-	</article>
+  <section>
+    <div class="relative">
+      <img src="/herobillede.jpg" alt="billede" class="min-h-[66vh]" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="hero bg-[#ffffff7c] h-50vh">
+          <div class="hero-content text-center">
+            <div class="max-w-md">
+              <h1 class="text-5xl font-bold">Champagne</h1>
+              <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+              <button class="btn btn-primary">Køb nu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex items-center justify-center">
+    <div class="stats stats-vertical lg:stats-horizontal shadow">
+      <div class="stat">
+        <div class="stat-title">Downloads</div>
+        <div class="stat-value">31K</div>
+        <div class="stat-desc">Jan 1st - Feb 1st</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title">New Users</div>
+        <div class="stat-value">4,200</div>
+        <div class="stat-desc">↗︎ 400 (22%)</div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-title">New Registers</div>
+        <div class="stat-value">1,200</div>
+        <div class="stat-desc">↘︎ 90 (14%)</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-base-200">
+    <div class="container mx-auto max-w-4xl">
+      <h2 class="text-4xl text-center text-base-300">Tørstig efter en flaske?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {
+          Array.from({ length: 9 }).map((_, index) => (
+            <div class="card bg-base-300 w-full shadow-sm" key={index}>
+              <figure>
+                <img src="/cardbillede.jpg" alt={`Card ${index + 1}`} class="w-60 h-auto" />
+              </figure>
+              <div class="card-body w-full">
+                <h2 class="card-title">Champagne</h2>
+                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <div class="card-actions justify-end">
+                  <button class="btn btn-primary">Køb nu</button>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="bg-base-200">
+    <div class="flex items-center justify-center">
+      <h2 class="text-4xl text-center text-base-300">Tørstig efter et abonnement?</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-4">
+      <div class="card w-96 bg-base-300 shadow-sm">
+        <div class="card-body">
+          <span class="badge badge-xs badge-warning bg-accent-content text-white border-accent-content">Klassisk</span>
+          <div class="flex justify-between">
+            <h2 class="text-3xl font-bold">Lidt tørstig?</h2>
+            <span class="text-xl">229,-/måned</span>
+          </div>
+          <ul class="mt-6 flex flex-col gap-2 text-xs">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>3 flasker om måneden</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Customizable style templates</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Batch processing capabilities</span>
+            </li>
+          </ul>
+          <div class="mt-6">
+            <button class="btn btn-primary btn-block">Køb nu</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card w-96 bg-base-300 shadow-sm">
+        <div class="card-body">
+          <span class="badge badge-xs badge-warning bg-accent border-accent text-base-200">Mest populær</span>
+          <div class="flex justify-between">
+            <h2 class="text-3xl font-bold">Meget tørstig?</h2>
+            <span class="text-xl">459,-/måned</span>
+          </div>
+          <ul class="mt-6 flex flex-col gap-2 text-xs">
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>5 flasker om måneden</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Customizable style templates</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              <span>Batch processing capabilities</span>
+            </li>
+          </ul>
+          <div class="mt-6">
+            <button class="btn btn-primary btn-block">Køb nu</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-base-200">
+    <div class="flex items-center justify-center">
+      <fieldset class="fieldset w-xs bg-neutral border border-base-300 p-4 rounded-box">
+        <legend class="fieldset-legend text-base-300 text-4xl">Login</legend>
+
+        <label class="fieldset-label text-base-300">Email</label>
+        <input type="email" class="input" placeholder="Email" />
+
+        <label class="fieldset-label text-base-300">Password</label>
+        <input type="password" class="input" placeholder="Password" />
+
+        <button class="btn btn-neutral mt-4">Login</button>
+      </fieldset>
+    </div>
+  </section>
 </MainLayout>
