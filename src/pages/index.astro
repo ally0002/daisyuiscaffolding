@@ -9,13 +9,13 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Titel">
   <section>
     <div class="relative">
-      <img src="/herobillede.jpg" alt="billede" class="min-h-[66vh]" />
+      <img src="/herobillede.jpg" alt="billede" class="min-h-[40vh]" />
       <div class="absolute inset-0 flex items-center justify-center">
         <div class="hero bg-[#ffffff7c] h-50vh">
           <div class="hero-content text-center">
             <div class="max-w-md">
-              <h1 class="text-5xl font-bold">Champagne</h1>
-              <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+              <h1 class="text-5xl font-extrabold charm-regular">Champagne</h1>
+              <p class="py-6">Uanset om du fejrer en særlig lejlighed eller ønsker at forkæle dig selv, er vores champagner den perfekte ledsager. Lad boblerne danse i glasset, og oplev de komplekse smagsnuancer, der gør hver slurk uforglemmelig!</p>
               <button class="btn btn-primary">Køb nu</button>
             </div>
           </div>
@@ -24,31 +24,31 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
 
-  <section class="flex items-center justify-center">
-    <div class="stats stats-vertical lg:stats-horizontal shadow">
-      <div class="stat">
-        <div class="stat-title">Downloads</div>
+  <section class="flex items-center justify-center pt-20 pb-20 bg-base-200">
+    <div class="stats stats-vertical lg:stats-horizontal shadow text-base-200">
+      <div class="stat bg-base-300">
+        <div class="stat-title text-accent-content">Flasker solgt</div>
         <div class="stat-value">31K</div>
-        <div class="stat-desc">Jan 1st - Feb 1st</div>
+        <div class="stat-desc text-accent-content">Jan 1st - Feb 1st</div>
       </div>
 
-      <div class="stat">
-        <div class="stat-title">New Users</div>
+      <div class="stat bg-base-300">
+        <div class="stat-title text-accent-content">Abonnementer</div>
         <div class="stat-value">4,200</div>
-        <div class="stat-desc">↗︎ 400 (22%)</div>
+        <div class="stat-desc text-accent-content">↗︎ 400 (22%)</div>
       </div>
 
-      <div class="stat">
-        <div class="stat-title">New Registers</div>
+      <div class="stat bg-base-300">
+        <div class="stat-title text-accent-content">Leveringer</div>
         <div class="stat-value">1,200</div>
-        <div class="stat-desc">↘︎ 90 (14%)</div>
+        <div class="stat-desc text-accent-content">↘︎ 90 (14%)</div>
       </div>
     </div>
   </section>
 
-  <section class="bg-base-200">
+  <section class="bg-base-200 pt-20 pb-20">
     <div class="container mx-auto max-w-4xl">
-      <h2 class="text-4xl text-center text-base-300">Tørstig efter en flaske?</h2>
+      <h2 class="text-4xl text-center text-base-300 pb-11 charm-regular">Tørstig efter en flaske?</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {
           Array.from({ length: 9 }).map((_, index) => (
@@ -69,9 +69,9 @@ import thumbsup from "../assets/images/thumbsup.png";
       </div>
     </div>
   </section>
-  <section class="bg-base-200">
+  <section class="bg-base-200 pt-20 pb-20">
     <div class="flex items-center justify-center">
-      <h2 class="text-4xl text-center text-base-300">Tørstig efter et abonnement?</h2>
+      <h2 class="text-4xl text-center text-base-300 pb-11 charm-regular">Tørstig efter et abonnement?</h2>
     </div>
     <div class="flex flex-wrap justify-center gap-4">
       <div class="card w-96 bg-base-300 shadow-sm">
@@ -130,18 +130,20 @@ import thumbsup from "../assets/images/thumbsup.png";
     </div>
   </section>
 
-  <section class="bg-base-200">
+  <section class="bg-base-200 pt-20 pb-20">
     <div class="flex items-center justify-center">
-      <fieldset class="fieldset w-xs bg-neutral border border-base-300 p-4 rounded-box">
-        <legend class="fieldset-legend text-base-300 text-4xl">Login</legend>
+      <fieldset class="fieldset w-xs bg-base-200 border border-base-300 border-4 p-4 rounded-box">
+        <legend class="fieldset-legend text-base-300 text-2xl">Kontakt kundeservice</legend>
+
+        <label class="fieldset-label text-base-300">Navn</label>
+        <input type="navn" class="input" placeholder="Navn" />
 
         <label class="fieldset-label text-base-300">Email</label>
         <input type="email" class="input" placeholder="Email" />
 
-        <label class="fieldset-label text-base-300">Password</label>
-        <input type="password" class="input" placeholder="Password" />
+        <textarea class="textarea" placeholder="Skriv dit spørgsmål!"></textarea>
 
-        <button class="btn btn-neutral mt-4">Login</button>
+        <button class="btn btn-primary mt-4">Send besked</button>
       </fieldset>
     </div>
   </section>
