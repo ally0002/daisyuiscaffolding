@@ -1,0 +1,12 @@
+---
+const { url = "#", cardimage = "", cardimagealt = "", cardtitle = "", bagdenyt = "false" } = Astro.props;
+---
+
+<section class="container mx-auto m-sectiontop px-4">
+  <h2 class="text-3xl m-sectionheading">Tørstig efter en flaske? (component)</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+    <Card> url="/singleview" cardimage="/cardbillede.jpg" cardimagealt="Card image" cardtitle="Champagne" cardtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." cardbuttontekst="Køb nu" </Card>
+    <Card> url="/singleview" cardimage="/cruz.jpg" cardimagealt="Bruz" cardtitle="Champagne Bruz" cardtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." cardbuttontekst="Køb nu" </Card>
+    <Card> url="/singleview" cardimage="/veuve.jpg" cardimagealt="Veuve" cardtitle="Champagne Veuve" cardtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." cardbuttontekst="Køb nu" </Card>
+  </div>
+</section>
